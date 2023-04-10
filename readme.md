@@ -33,9 +33,9 @@ A macOS bash script that checks if the computer has not been rebooted for more t
 
 Run the script manually from the terminal:
 
-\`\`\`sh
+```
 /usr/local/bin/restart-reminder.sh
-\`\`\`
+```
 
 You can also schedule the script to run at a specific time using a tool like \`cron\` or \`launchd\`.
 
