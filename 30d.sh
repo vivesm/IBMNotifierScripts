@@ -54,14 +54,18 @@ prompt_user() {
 
 ### END FUNCTIONS ###
 
-# Example 2 button prompt
-RESPONSE=$(prompt_user)
-echo "$RESPONSE"
+uptime_data=($(get_uptime))
+uptime_days=${uptime_data[0]}
 
-if [[ $RESPONSE -eq 0 ]]; then
-    shutdown -r now
-elif [[ $RESPONSE -eq 2 ]]; then
-    exit 1
+if [[ $uptime_days -ge $DAYS_UPTIME ]]; then
+    RESPONSE=$(prompt_user)
+    echo "$RESPONSE"
+
+    if [[ $RESPONSE -eq 0 ]]; then
+        shutdown -r now
+    elif [[ $RESPONSE -eq 2 ]]; then
+        exit 1
+    fi
 fi
 
 exit 0
