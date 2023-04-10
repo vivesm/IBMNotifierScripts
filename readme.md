@@ -1,4 +1,4 @@
-Restart Reminder
+# Restart Reminder
 
 A macOS bash script that checks if the computer has not been rebooted for more than 30 days and prompts the user with a notification to restart their computer.
 
