@@ -9,8 +9,6 @@ A macOS bash script that checks if the computer has not been rebooted for more t
 - [Installation](#installation)
 - [Usage](#usage)
 - [Integration with JAMF Pro](#integration-with-jamf-pro)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -52,15 +50,7 @@ To integrate this script with JAMF Pro and use an extension attribute:
     - \`Uptime Days\` is greater than or equal to 30.
 3. Create a policy in JAMF Pro that targets the smart group created in step 2.
     - Trigger: Recurring Check-in
-    - Execution Frequency: Once per computer
+    - Execution Frequency: Once per day
     - Add the \`restart-reminder.sh\` script to the policy.
 
 This will run the \`restart-reminder.sh\` script on computers that have not been restarted for 30 days or more.
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome. Feel free to check the [Issues](https://github.com/yourusername/restart-reminder/issues) page if you want to contribute.
-
-## License
-
-Distributed under the MIT License. See \`LICENSE\` for more information.
