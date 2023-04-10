@@ -1,4 +1,4 @@
-# Shelly's Shortcut: Restart Reminder
+Restart Reminder
 
 A macOS bash script that checks if the computer has not been rebooted for more than 30 days and prompts the user with a notification to restart their computer.
 
@@ -33,9 +33,9 @@ A macOS bash script that checks if the computer has not been rebooted for more t
 
 Run the script manually from the terminal:
 
-\```sh
+\`\`\`sh
 /usr/local/bin/restart-reminder.sh
-\```
+\`\`\`
 
 You can also schedule the script to run at a specific time using a tool like \`cron\` or \`launchd\`.
 
