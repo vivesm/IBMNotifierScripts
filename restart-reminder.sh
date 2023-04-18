@@ -4,10 +4,10 @@
 NA_PATH="/Applications/IBM Notifier.app/Contents/MacOS/IBM Notifier"
 
 # Variables for the popup notification for ease of customization
-WINDOWTYPE="popup"
-BAR_TITLE="Shelly's Shortcut: Restart Reminder"
+WINDOWTYPE="banner" # popup | systemalert | banner | alert | onboarding
+BAR_TITLE="Restart Reminder"
 TITLE="Your computer has not rebooted for over 30 days"
-TIMEOUT="60" # leave empty for no notification time
+TIMEOUT="" # leave empty for no notification time
 BUTTON_1="Restart Now"
 BUTTON_2="Later"
 ICON_PATH="/Users/Shared/cocollective-logo.png"
@@ -16,7 +16,7 @@ ICON_PATH="/Users/Shared/cocollective-logo.png"
 SECONDS_IN_DAY=86400
 
 # Number of days to check for uptime
-DAYS_UPTIME=30
+DAYS_UPTIME=1
 
 ### FUNCTIONS ###
 
@@ -37,7 +37,7 @@ prompt_user() {
     local uptime=($(get_uptime))
     local days=${uptime[0]}
 
-    local subtitle=$(printf "Wow! Your computer is a fresh %d day champ! But even top performers need a breather. Let's reboot for a snappier, more cheerful machine. \n\n Restart now and unleash the optimization!" "$days")
+    local subtitle=$(printf "Your Mac has been running non-stop for %d days! It's time to give it a break and improve its performance. \n\n Save your work and click 'Restart Now' to reboot your Mac." "$days")
     button=$("${NA_PATH}" \
         -type "${WINDOWTYPE}" \
         -bar_title "${BAR_TITLE}" \
