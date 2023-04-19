@@ -4,13 +4,13 @@
 NA_PATH="/Applications/IBM Notifier.app/Contents/MacOS/IBM Notifier"
 
 # Variables for the popup notification for ease of customization
-WINDOWTYPE="banner" # popup | systemalert | banner | alert | onboarding
+WINDOWTYPE="systemalert" # popup | systemalert | banner | alert | onboarding
 BAR_TITLE="Restart Reminder"
 TITLE="Your computer has not rebooted for over 30 days"
-TIMEOUT="" # leave empty for no notification timeout
+TIMEOUT="" # leave empty for no notification time
 BUTTON_1="Restart Now"
 BUTTON_2="Later"
-ICON_PATH="/Users/Shared/cocollective-logo.png"
+ICON_PATH="/Users/Shared/company-logo.png" # path to icon
 
 # Number of seconds in a day
 SECONDS_IN_DAY=86400
