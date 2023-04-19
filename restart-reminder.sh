@@ -16,7 +16,7 @@ ICON_PATH="/Users/Shared/cocollective-logo.png"
 SECONDS_IN_DAY=86400
 
 # Number of days to check for uptime
-DAYS_UPTIME=1
+DAYS_UPTIME=30
 
 ### FUNCTIONS ###
 
